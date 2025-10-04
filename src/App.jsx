@@ -8,9 +8,13 @@ import Footer from './components/footer';
 function App() {
   const [showInstructions, setShowInstructions] = useState(false);
 
-  const toggleInstructions = () => {
+  function toggleInstructions() {
     setShowInstructions((prev) => !prev);
-  };
+  }
+
+  function handleClick() {
+    alert('Click');
+  }
 
   return (
     <div className="app">
@@ -20,7 +24,7 @@ function App() {
       />
 
       <Instructions showInstructions={showInstructions} />
-      <Main />
+      <Main handleClick={handleClick} />
       <Footer />
     </div>
   );
