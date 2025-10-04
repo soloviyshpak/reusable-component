@@ -1,13 +1,11 @@
-import Button from './Button';
-
-export default function Main({ handleClick }) {
+export default function Main({ children }) {
   return (
     <main className="component-showcase">
+      {children}
+
       <section className="component-group">
         <h2>Variants</h2>
         <div className="component-card">
-          <Button onClick={handleClick}>Сосат</Button>
-
           <button className="button primary">Primary</button>
           <button className="button secondary">Secondary</button>
           <button className="button danger">Danger</button>
