@@ -27,29 +27,38 @@ function App() {
 
       <Instructions showInstructions={showInstructions} />
       <Main>
-        <Section>
-          <Button onClick={handleClick} isDisabled>
-            Some text
+        <Section title="Variants">
+          <Button variant="primary">Primary</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="danger">Danger</Button>
+          <Button variant="gradient">Gradient</Button>
+          <Button variant="outline">Outline</Button>
+        </Section>
+
+        <Section title="Sizes">
+          <Button variant="primary" size="small">
+            Small
           </Button>
-          <Button onClick={handleClick} fullWidth>
-            Some text 2
+          <Button variant="primary" size="medium">
+            Medium
           </Button>
-          <Button onClick={handleClick} variant="secondary">
-            Some text 3
-          </Button>
-          <Button onClick={handleClick} variant="secondary" size={'large'}>
-            Some text 3
+          <Button variant="primary" size="large">
+            Large
           </Button>
         </Section>
-        <Section handleClick={handleClick}>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
+        <Section title="Button States">
+          <Button>Default</Button>
+          <Button isDisabled>Disabled</Button>
         </Section>
-        <Section handleClick={handleClick}>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
+        <Section title="Full Width Button">
+          <Button fullWidth variant="secondary">
+            FULL WIDTH
+          </Button>
+        </Section>
+        <Section title="With fn">
+          <Button variant="primary" onClick={handleClick}>
+            Click me
+          </Button>
         </Section>
       </Main>
       <Footer />
